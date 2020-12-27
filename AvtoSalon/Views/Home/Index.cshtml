@@ -1,0 +1,48 @@
+﻿@model AvtoSalon.Models.Accessory
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Автосалон "Premier league"</h2>
+    <table>
+        <tr class="header">
+            <td>
+                <p>
+                    Здесь можно найти всю необходимую информацию, которую захочет узнать клиент перед и непосредственно при покупке автомобиля.
+                </p>
+                <p>
+                    Выберите необходимый раздел из списка вверху и посмотрите имеющууся информацию.
+                </p>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <style>
+        body {
+            background-image: url(https://www.footballnerds.it/wp-content/uploads/2016/02/CUP_gif01_v1.gif);
+            background-size: 100% auto;
+        }
+    </style>
+</div>
+
+<script>
+	if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js').then(function(reg) {
+
+	  if(reg.installing) {
+		console.log('Service worker installing');
+	  } else if(reg.waiting) {
+		console.log('Service worker installed');
+	  } else if(reg.active) {
+		console.log('Service worker active');
+	  }
+
+	}).catch(function(error) {
+	  // registration failed
+	  console.log('Registration failed with ' + error);
+	});
+  }
+</script>
